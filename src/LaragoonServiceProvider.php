@@ -27,6 +27,13 @@ class LaragoonServiceProvider extends ServiceProvider
             ], 'laragoon-config');
 
         /**
+         * Laragoon scripts
+         */
+        $this->publishes([
+            __DIR__.'/../lagoon/scripts/' => base_path("scripts"),
+        ], 'laragoon-scripts');
+
+        /**
          * Laragoon DB configuration
          */
         $this->publishes([
