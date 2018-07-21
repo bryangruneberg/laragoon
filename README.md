@@ -41,7 +41,7 @@ To publish helpful artisan scripts run: `php artisan vendor:publish --tag=larago
 Finally, to set your Lagoon project name, run `php artisan lagoon:set-project-name` and follow the prompts.
 
 You can go ahead and customize the Dockerfiles, .lagoon.yml, and docker-compose.yml. If you want to retrieve the 
-original files, you can rerun the vendor:publish commands, appending the --force option to for an overwrite. 
+original files, you can rerun the vendor:publish commands, appending the --force option to force an overwrite. 
 
 ## Running
 
