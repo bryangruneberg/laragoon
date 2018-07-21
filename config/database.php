@@ -9,11 +9,11 @@ return [
     'connections' => [
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('MARIADB_HOST', env('DB_HOST', '127.0.0.1')),
+            'host' => env('MARIADB_HOST', env('DB_HOST', 'mariadb')),
             'port' => env('MARIADB_PORT', env('DB_PORT', '3306')),
-            'database' => env('MARIADB_DATABASE', env('DB_DATABASE', 'forge')),
-            'username' => env('MARIADB_USER', env('DB_USERNAME', 'forge')),
-            'password' => env('MARIADB_PASSWORD', env('DB_PASSWORD', '')),
+            'database' => env('MARIADB_DATABASE', env('DB_DATABASE', 'lagoon')),
+            'username' => env('MARIADB_USER', env('DB_USERNAME', 'lagoon')),
+            'password' => env('MARIADB_PASSWORD', env('DB_PASSWORD', 'lagoon')),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
