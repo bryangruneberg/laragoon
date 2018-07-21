@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Bryangruneberg\\Laragoon\\": "src"
+      "Bryangruneberg\\Laragoon\\": "src/"
     }
   },
   "extra": {
