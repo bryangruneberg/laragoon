@@ -22,7 +22,7 @@ It is assumed that you have a Laravel app already running.
 
 ## Installation
 
-`composer install bryangruneberg/laragoon`
+`composer require bryangruneberg/laragoon`
 
 ## Configuration
 
