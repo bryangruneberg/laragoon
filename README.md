@@ -1,11 +1,5 @@
 # Laragoon
 
-This package is supported on Laravel 5.5 and above.
-
-It is assumed that you have amazee.io's Lagoon requirements already installed. See http://lagoon.rtfd.io/ for details.
-
-It is assumed that you have a Laravel app already running. 
-
 ## Introduction
 This package provides a simple way to run a Laravel app on the wonderful amazee.io Lagoon infrastructure.
 
@@ -17,6 +11,14 @@ The package consists of a few components:
  - A service provider which 
    - Makes the Dockerfiles, the configuration files, and severl supporting files publishable
    - Looks for a Lagoon environment and overloads an environment specific config file if found 
+
+## Requirements
+
+This package is supported on Laravel 5.5 and above.
+
+It is assumed that you have amazee.io's Lagoon requirements already installed. See http://lagoon.rtfd.io/ for details.
+
+It is assumed that you have a Laravel app already running. 
 
 ## Installation
 
