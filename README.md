@@ -28,7 +28,7 @@ To publish the laragoon configuration run:
 `php artisan vendor:publish --tag=laragoon-config`
 
 To publish the laragoon database configuration run: 
-`php artisan vendor:publish --tag=laragoon-db-config`. But be careful, the /config/database.php that comes with laravel will prevent 
+`php artisan vendor:publish --tag=laragoon-db-config`. But be careful, the /config/database.php that comes with Laravel will prevent 
 the laragoon configuration from writing. You can choose to force the operation by appending the --force option to the command.
 Alternatively run `php artisan laragoon:db-config` to have a database stanza outputted to the console.
 
