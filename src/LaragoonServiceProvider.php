@@ -4,7 +4,10 @@ namespace Bryangruneberg\Laragoon;
 
 use Illuminate\Support\ServiceProvider;
 use Bryangruneberg\Laragoon\LaragoonFacade;
-use Bryangruneberg\Laragoon\Commands;
+use Bryangruneberg\Laragoon\Commands\LaragoonDbConfigCommand;
+use Bryangruneberg\Laragoon\Commands\LaragoonSetProjectNameCommand;
+use Bryangruneberg\Laragoon\Commands\LaragoonSSHCommand;
+use Bryangruneberg\Laragoon\Commands\LaragoonSACommand;
 
 class LaragoonServiceProvider extends ServiceProvider
 {
@@ -17,6 +20,8 @@ class LaragoonServiceProvider extends ServiceProvider
             $this->commands([
                 LaragoonDbConfigCommand::class,
                 LaragoonSetProjectNameCommand::class,
+                LaragoonSACommand::class,
+                LaragoonSSHCommand::class,
             ]);
         }
 
