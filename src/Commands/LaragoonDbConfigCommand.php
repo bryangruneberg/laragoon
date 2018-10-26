@@ -1,4 +1,4 @@
-<?php namespace Bryangruneberg\Laragoon;
+<?php namespace Bryangruneberg\Laragoon\Commands;
 
 use Illuminate\Console\Command;
 

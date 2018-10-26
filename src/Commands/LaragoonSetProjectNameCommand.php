@@ -1,6 +1,6 @@
 <?php
 
-namespace Bryangruneberg\Laragoon;
+namespace Bryangruneberg\Laragoon\Commands;
 
 use Bryangruneberg\Laragoon\LaragoonFacade;
 use Illuminate\Console\Command;

@@ -4,6 +4,7 @@ namespace Bryangruneberg\Laragoon;
 
 use Illuminate\Support\ServiceProvider;
 use Bryangruneberg\Laragoon\LaragoonFacade;
+use Bryangruneberg\Laragoon\Commands;
 
 class LaragoonServiceProvider extends ServiceProvider
 {
