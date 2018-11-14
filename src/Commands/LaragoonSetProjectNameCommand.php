@@ -3,6 +3,7 @@
 namespace Bryangruneberg\Laragoon\Commands;
 
 use Bryangruneberg\Laragoon\LaragoonFacade;
+use Bryangruneberg\Laragoon\LaragoonService;
 use Illuminate\Console\Command;
 
 class LaragoonSetProjectNameCommand extends Command
