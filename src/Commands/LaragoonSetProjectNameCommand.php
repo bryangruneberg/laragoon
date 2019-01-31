@@ -18,6 +18,10 @@ class LaragoonSetProjectNameCommand extends Command
 
     public function handle()
     {
+        if(! $this->commandIsReady()) {
+            return $this->handleCommandIsNotReady();
+        }
+        
         $laragoon = app(LaragoonService::class);
         $projectName = $this->ask("What is your projects name?");
 
