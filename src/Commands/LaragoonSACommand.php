@@ -11,6 +11,10 @@ class LaragoonSACommand extends LaragoonBaseCommand
 
     public function handle()
     {
+        if(! $this->commandIsReady()) {
+            return $this->handleCommandIsNotReady();
+        }
+        
         foreach ($this->getSiteAliases() as $id => $details) {
             $this->line("@" . $id);
         }

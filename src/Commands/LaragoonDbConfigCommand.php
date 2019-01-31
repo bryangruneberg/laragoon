@@ -11,6 +11,10 @@ class LaragoonDbConfigCommand extends Command
 
     public function handle()
     {
+        if(! $this->commandIsReady()) {
+            return $this->handleCommandIsNotReady();
+        }
+        
         $this->info("The following configuration can be placed in /config/database.php");
         $this->info("To publish this config, you can run:");
         $this->warn("php artisan vendor:publish --force --tag=laragoon-db-config");

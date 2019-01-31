@@ -11,6 +11,10 @@ class LaragoonSSHCommand extends LaragoonBaseCommand
 
     public function handle()
     {
+        if(! $this->commandIsReady()) {
+            return $this->handleCommandIsNotReady();
+        }
+        
         $lenv = $this->argument('lenv');
 
         if ($lenv[0] == "@") {
