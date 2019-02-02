@@ -2,7 +2,7 @@
 
 use Illuminate\Console\Command;
 
-class LaragoonDbConfigCommand extends Command
+class LaragoonDbConfigCommand extends LaragoonBaseCommand
 {
 
     protected $signature = 'laragoon:db-config';
@@ -20,6 +20,7 @@ class LaragoonDbConfigCommand extends Command
         $this->warn("php artisan vendor:publish --force --tag=laragoon-db-config");
 
         $this->output->write(file_get_contents(__DIR__
+            . DIRECTORY_SEPARATOR . ".."
             . DIRECTORY_SEPARATOR . ".."
             . DIRECTORY_SEPARATOR . "config"
             . DIRECTORY_SEPARATOR . "database.php")

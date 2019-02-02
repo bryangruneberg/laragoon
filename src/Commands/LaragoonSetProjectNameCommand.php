@@ -6,7 +6,7 @@ use Bryangruneberg\Laragoon\LaragoonFacade;
 use Bryangruneberg\Laragoon\LaragoonService;
 use Illuminate\Console\Command;
 
-class LaragoonSetProjectNameCommand extends Command
+class LaragoonSetProjectNameCommand extends LaragoonBaseCommand
 {
 
     const RETURN_SUCCESS = 0;
