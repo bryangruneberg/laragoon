@@ -17,7 +17,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.6.4",
-    "amazee/laragoon-support-libs": "dev-master"
+    "amazee/laragoon-support-libs": "^0.1"
   },
   "autoload": {
     "psr-4": {
