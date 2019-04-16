@@ -12,7 +12,7 @@ return [
             'host' => env('MARIADB_HOST', env('DB_HOST', 'mariadb')),
             'port' => env('MARIADB_PORT', env('DB_PORT', '3306')),
             'database' => env('MARIADB_DATABASE', env('DB_DATABASE', 'lagoon')),
-            'username' => env('MARIADB_USER', env('DB_USERNAME', 'lagoon')),
+            'username' => env('MARIADB_USERNAME', env('DB_USERNAME', 'lagoon')),
             'password' => env('MARIADB_PASSWORD', env('DB_PASSWORD', 'lagoon')),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
