@@ -37,7 +37,7 @@ class LaragoonSSHCommand extends LaragoonBaseCommand
 
         $alias = $aliases[$lenv];
         
-        $cmd = "ssh {$alias['ssh-options']} {$alias['remote-user']}@{$alias['remote-host']} service={$service} container={$container}";
+        $cmd = "ssh -t {$alias['ssh-options']} {$alias['remote-user']}@{$alias['remote-host']} service={$service} container={$container}";
         if($this->getOutput()->isVerbose()) {
             $this->warn($cmd);
         }
