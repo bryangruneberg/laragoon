@@ -5,7 +5,7 @@ use Illuminate\Console\Command;
 class LaragoonSSHCommand extends LaragoonBaseCommand
 {
 
-    protected $signature = 'lagoon:ssh {lenv=@dev : Lagoon Environment}';
+    protected $signature = 'lagoon:ssh {environment=@dev : Lagoon Environment} {--service=cli : Lagoon Service} {--container=cli : Lagoon Container}';
 
     protected $description = 'SSH to a lagoon environment';
 
@@ -15,7 +15,9 @@ class LaragoonSSHCommand extends LaragoonBaseCommand
             return $this->handleCommandIsNotReady();
         }
         
-        $lenv = $this->argument('lenv');
+        $lenv = $this->argument('environment');
+        $service = $this->option('service');
+        $container = $this->option('container');
 
         if ($lenv[0] == "@") {
             $lenv = ltrim($lenv, "@");
@@ -35,7 +37,10 @@ class LaragoonSSHCommand extends LaragoonBaseCommand
 
         $alias = $aliases[$lenv];
         
-        $cmd = "ssh {$alias['remote-user']}@{$alias['remote-host']} {$alias['ssh-options']}";
+        $cmd = "ssh {$alias['ssh-options']} {$alias['remote-user']}@{$alias['remote-host']} service={$service} container={$container}";
+        if($this->getOutput()->isVerbose()) {
+            $this->warn($cmd);
+        }
 
         $process = proc_open($cmd, array(0 => STDIN, 1 => STDOUT, 2 => STDERR), $pipes);
         $proc_status = proc_get_status($process);
