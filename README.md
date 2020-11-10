@@ -40,6 +40,8 @@ To publish Docker and Lagoon files for php-7.2 run: `php artisan vendor:publish 
 
 To publish Docker and Lagoon files for php-7.3 run: `php artisan vendor:publish --tag=laragoon-lagoon-php-7.3`
 
+To publish Docker and Lagoon files for php-7.4 run: `php artisan vendor:publish --tag=laragoon-lagoon-php-7.4`
+
 To publish helpful artisan scripts run: `php artisan vendor:publish --tag=laragoon-scripts`
 
 Finally, to set your Lagoon project name, run `php artisan laragoon:set-project-name` and follow the prompts.
