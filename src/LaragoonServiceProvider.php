@@ -89,7 +89,22 @@ class LaragoonServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../docker/php-7.3' => base_path(),
-          ], 'laragoon-lagoon-php-7.3');
+	], 'laragoon-lagoon-php-7.3');
+
+        /**
+         * Laragoon configuration for PHP-7.4
+         */
+        $this->publishes([
+            __DIR__.'/../lagoon/.lagoon.yml' => base_path('.lagoon.yml'),
+        ], 'laragoon-lagoon-php-7.4');
+
+        $this->publishes([
+            __DIR__.'/../lagoon/config/php-7.4' => base_path('lagoon'),
+        ], 'laragoon-lagoon-php-7.4');
+
+        $this->publishes([
+            __DIR__.'/../docker/php-7.4' => base_path(),
+          ], 'laragoon-lagoon-php-7.4');
     }
 
     public function register()
