@@ -6,8 +6,6 @@ FROM amazeeio/php:7.2-cli
 COPY lagoon/php-worker.ini /usr/local/etc/php/php.ini
 COPY . /app
 RUN composer install --no-dev --prefer-dist
-RUN yarn install
-RUN npm run dev
 
 ENV APP_ENV=${LAGOON_ENVIRONMENT_TYPE}
 ENV WEBROOT=public
